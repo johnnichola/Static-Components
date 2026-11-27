@@ -7,7 +7,7 @@ function App() {
   return (
   <>
     <Header title="Welcome to my Website!" message="Thanks for visiting my site" />
-    <Footer />
+    <Footer message="Contact me at gono@saskpolytech.ca" websiteName="Gono-Assignment2"/>
   </>
 )
 }
