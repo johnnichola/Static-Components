@@ -6,7 +6,7 @@ function App() {
 
   return (
   <>
-    <Header />
+    <Header title="Welcome to my Website!" message="Thanks for visiting my site" />
     <Footer />
   </>
 )
