@@ -4,8 +4,18 @@ import Footer from './components/Footer.jsx';
 import Todo from './components/TodoList.jsx';
 import Card from './components/Card.jsx';
 
+/*
+  -------------------------------------------------------------------------
+  I just like to put everything in an object to make myself look smart lol
+  Plus, I think it looks cleaner and easier to work with
+  -------------------------------------------------------------------------
+*/
 const myData = 
 {
+  header:{
+    title: "Welcome to my Website!",
+    message: "Thanks for visiting my site!"
+  },
   card: {
     title: "My Card Title", 
     subtitle: "My Card Subtitle", 
@@ -17,22 +27,26 @@ const myData =
     { id: 2, text: "[MULT123] Add Textures to 3D environment", completed: false},
     { id: 3, text: "[MULT123] Create 3x3x3m my space in blender", completed: true},
     { id: 4, text: "[MULT213] Do Async Javascript webpage", completed: true},
-    { id: 5, text: "[MULT213] Create Static Components in Vite", completed: false},
-  ]
+    { id: 5, text: "[MULT213] Create Static Components in Vite", completed: true},
+  ],
+  footer: {
+    message: "Contact me at gono@saskpolytech.ca",
+    websiteName: "Gono-Assignment2"
+  }
 }
 
 function App() {
   
   return (
   <div style={{display: "flex", gap: 20, flexDirection: "column"}}>
-    <Header title="Welcome to my Website!" message="Thanks for visiting my site" />
+    <Header title={myData.header.title} message={myData.header.message} />
     <Card 
       title={myData.card.title} 
       subtitle={myData.card.subtitle} 
       content={myData.card.content}
       image={myData.card.image} />
     <Todo list={myData.todoList} />
-    <Footer message="Contact me at gono@saskpolytech.ca" websiteName="Gono-Assignment2"/>
+    <Footer message={myData.footer.message} websiteName={myData.footer.websiteName} />
   </div>
 )
 }
